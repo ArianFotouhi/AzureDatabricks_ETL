@@ -83,8 +83,8 @@ In Spark, each worker node has one Java Virtual Machine (JVM) executor (Spark is
 To scale the clusters, there are two methods namely, horizontal and vertical scaling. Vertical scaling is to increase the number of cores of each node and also horizontal scaling is to increase the number of nodes (worker nodes). Horizontal scaling can handle computationally intensive tasks due to limit on number of manageable cores by each node.
 <hr>
 
-<h4>Data Loading Types</h4>
-<h5>Full Data Load</h5>
+<h2>Data Loading Types</h2>
+<h4>Full Data Load</h4>
 Definition: A full data load, also known as a full refresh or full extract, involves transferring and loading the entire dataset from the source system into the target system.
 
 Use Cases:
@@ -100,7 +100,7 @@ Considerations:
 Can be resource-intensive, especially for large datasets.
 May result in longer data loading times and higher network transfer costs.
 
-<h5>Incremental Data Load</h5>
+<h4>Incremental Data Load</h4>
 
 Definition: An incremental data load involves transferring and loading only the data that has changed or is new since the last data load.
 
@@ -117,7 +117,7 @@ Considerations:
 Requires mechanisms to identify and capture changes in the source data (e.g., timestamps or change data capture techniques).
 May involve more complex data loading logic compared to full loads.
 
-<h5>Hybrid Approach</h5>
+<h4>Hybrid Approach</h4>
 
 Many organizations use a combination of both full and incremental data loading strategies.
 For example, periodic full loads (e.g., daily or weekly) are performed to ensure data integrity, while incremental loads are used to keep the data current between full loads.
