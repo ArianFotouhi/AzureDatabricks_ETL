@@ -83,6 +83,48 @@ In Spark, each worker node has one Java Virtual Machine (JVM) executor (Spark is
 To scale the clusters, there are two methods namely, horizontal and vertical scaling. Vertical scaling is to increase the number of cores of each node and also horizontal scaling is to increase the number of nodes (worker nodes). Horizontal scaling can handle computationally intensive tasks due to limit on number of manageable cores by each node.
 <hr>
 
+<h4>Data Loading Types</h4>
+<h5>Full Data Load</h5>
+Definition: A full data load, also known as a full refresh or full extract, involves transferring and loading the entire dataset from the source system into the target system.
+
+Use Cases:
+
+Used when you want to completely replace or refresh the existing data in the target system with the latest data from the source.
+Appropriate when the source data undergoes significant changes or updates, and you need to ensure that the target system is in sync with the source.
+Advantages:
+
+Ensures that the target system has a complete and up-to-date copy of the source data.
+Suitable for scenarios where data volume is moderate, and the source data changes infrequently.
+Considerations:
+
+Can be resource-intensive, especially for large datasets.
+May result in longer data loading times and higher network transfer costs.
+
+<h5>Incremental Data Load</h5>
+
+Definition: An incremental data load involves transferring and loading only the data that has changed or is new since the last data load.
+
+Use Cases:
+
+Used to update the target system with changes or additions made to the source data since the previous data load.
+Efficient for scenarios where data volume is large, and only a fraction of the data changes frequently.
+Advantages:
+
+Reduces data transfer and processing time, making it more resource-efficient.
+Suitable for scenarios where the source data changes frequently or where data volume is substantial.
+Considerations:
+
+Requires mechanisms to identify and capture changes in the source data (e.g., timestamps or change data capture techniques).
+May involve more complex data loading logic compared to full loads.
+
+<h5>Hybrid Approach</h5>
+
+Many organizations use a combination of both full and incremental data loading strategies.
+For example, periodic full loads (e.g., daily or weekly) are performed to ensure data integrity, while incremental loads are used to keep the data current between full loads.
+This hybrid approach balances the need for data accuracy and efficiency in data loading processes.
+
+<hr>
+
 [Link](https://learn.microsoft.com/en-us/azure/architecture/browse/) to Microsoft proposed Azured based architectures
 
 <hr>
