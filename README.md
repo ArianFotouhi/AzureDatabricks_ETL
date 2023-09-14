@@ -1,4 +1,7 @@
-# AzureDatabricks_Analyzer
+# ETL by Azure Data Lake + Databricks
+
+The application uses Databricks to read raw data from Azure Data Lake then transformss the data by clusters and lastly, it loads the data in parquet format into the Azure Data Lake.  
+---------------------------------------------------------------------
 
 To deploy databricks our based application firstly we need to explain databricks attributes. Basically, there are two types of clusters in databricks:
 
