@@ -30,9 +30,10 @@ It is noteworthy, Delta Live is closely integrated with Databricks. Delta Live T
 5. Click on Start button of the created Workflow
 
 
-
+<p>
 NB 1: In the workflow page, there are two options for the workflow namely, Trigger and Continous. Trigger leads to run the application and creating the table once the user has run the workflow (happens only once). In case of Continous, the workflow is continously run and whenever the source file (info.csv on Azure Data Lake) is changed, the changes are reflected in the created table by our workflow (always running).
-
+</p>
+<p> 
 NB 2: When starting the workflow, you may face error in Waiting for resources while everyting look fine. The probable issue is fail to access the cluster. In workflow page, you can go to Setting > Json and replace the cluster key values with below key values:
 
 ```
@@ -44,6 +45,7 @@ NB 2: When starting the workflow, you may face error in Waiting for resources wh
   }
 ]
 ```
-
+</p>
+<p>
 NB 3: After solving above problem, another common issue might rise. Azure machine core resources might run out. For that, open Azure account and seach the term "Quotas" then click Compute option. In the option "Usage at regular level" you can increase the cores that can be allocated.   
-
+</p>
