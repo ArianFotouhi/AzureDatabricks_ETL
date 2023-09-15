@@ -22,11 +22,26 @@ Delta Live focuses on real-time streaming data processing. It's designed to hand
 
 It is noteworthy, Delta Live is closely integrated with Databricks. Delta Live Tables is not a standalone product thereby, to use that Databricks account and cluster is required.
 
-```python
-dbutils.fs.ls('path/to/the/file')
+<h2>How to run Delta Live based ETL:</h2>
+1. Create a notebook like ETL/DeltaLakePy.ipynb or ETL/DeltaLakeSQL.ipynb
+2. Complete the notebook (it cannot be run and tested before running the workflow!)
+3. Click Workflow > Delta Live Tables > Create Pipeline
+4. Create the workflow
+5. Click on Start button of the created Workflow
+
+NB 1: In the workflow page, there are two options for the workflow namely, Trigger and Continous. Trigger leads to run the application and creating the table once the user has run the workflow (happens only once). In case of Continous, the workflow is continously run and whenever the source file (info.csv on Azure Data Lake) is changed, the changes are reflected in the created table by our workflow (always running).
+
+NB 2: When starting the workflow, you may face error in Waiting for resources while everyting look fine. The probable issue is fail to access the cluster. In workflow page, you can go to Setting > Json and replace the cluster key values with below key values:
+
 ```
-<hr>
+"clusters":[
+  {
+    "label":"default",
+    "node_type_id":"Standard_DS3_v2",
+    "driver_node_type_id": "Standard_DS3_v2"
+  }
+]
+```
 
-[Link](https://learn.microsoft.com/en-us/azure/architecture/browse/) to Microsoft proposed Azured based architectures
+NB 3: After solving above problem, another common issue might rise. Azure machine core resources might run out. For that, open Azure account and seach the term "Quotas" then click Compute option. In the option "Usage at regular level" you can increase the cores that can be allocated.   
 
-<hr>
