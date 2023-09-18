@@ -1,4 +1,4 @@
-# ETL by Azure Azure Data Factory + Databricks
+# ETL by Azure Data Factory + Databricks
 
 A pipeline for ETL (Extract, Transform, Load) processes is created using Databricks and orchestrated by Azure Data Factory workflow-based practices.
 ---------------------------------------------------------------------
