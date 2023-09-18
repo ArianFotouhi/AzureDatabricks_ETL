@@ -3,7 +3,7 @@
 A pipeline for ETL (Extract, Transform, Load) processes is created using Databricks and orchestrated by Azure Data Factory workflow-based practices.
 ---------------------------------------------------------------------
 
-  <img src="./asset/DataFactory1.jpg" alt="result" height="400">
+  <img src="./Asset/DataFactory1.jpg" alt="result" height="400">
 
 Azure Data Factory is a cloud-based data integration service provided by Microsoft Azure. It enables you to create, schedule, and automate data-driven workflows for moving, transforming, and processing data from various sources to various destinations. Azure Data Factory is part of the Azure Data Integration services and plays a crucial role in modern data architectures.
 
